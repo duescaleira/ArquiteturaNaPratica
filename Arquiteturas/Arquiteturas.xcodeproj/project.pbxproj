@@ -14,6 +14,10 @@
 		43BE0CC729DF239A001B5963 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43BE0CC529DF239A001B5963 /* Main.storyboard */; };
 		43BE0CC929DF239C001B5963 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43BE0CC829DF239C001B5963 /* Assets.xcassets */; };
 		43BE0CCC29DF239C001B5963 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43BE0CCA29DF239C001B5963 /* LaunchScreen.storyboard */; };
+		43BE0CD929DF2C28001B5963 /* UserProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BE0CD829DF2C28001B5963 /* UserProvider.swift */; };
+		43BE0CDC29DF2C92001B5963 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BE0CDB29DF2C92001B5963 /* UserModel.swift */; };
+		43BE0CDF29DF2F7D001B5963 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BE0CDE29DF2F7D001B5963 /* Constants.swift */; };
+		43BE0CE129DF3691001B5963 /* UserBusiness.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BE0CE029DF3691001B5963 /* UserBusiness.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +29,10 @@
 		43BE0CC829DF239C001B5963 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		43BE0CCB29DF239C001B5963 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		43BE0CCD29DF239C001B5963 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		43BE0CD829DF2C28001B5963 /* UserProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProvider.swift; sourceTree = "<group>"; };
+		43BE0CDB29DF2C92001B5963 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		43BE0CDE29DF2F7D001B5963 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		43BE0CE029DF3691001B5963 /* UserBusiness.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserBusiness.swift; sourceTree = "<group>"; };
 		AEF5C4149B75D3004A8AA2B6 /* Pods-Arquiteturas.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Arquiteturas.debug.xcconfig"; path = "Target Support Files/Pods-Arquiteturas/Pods-Arquiteturas.debug.xcconfig"; sourceTree = "<group>"; };
 		DA6C659F0C75C428CD6BF51E /* Pods-Arquiteturas.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Arquiteturas.release.xcconfig"; path = "Target Support Files/Pods-Arquiteturas/Pods-Arquiteturas.release.xcconfig"; sourceTree = "<group>"; };
 		F7057A8C802A54BB55F8487A /* Pods_Arquiteturas.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Arquiteturas.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -63,6 +71,7 @@
 		43BE0CBE29DF239A001B5963 /* Arquiteturas */ = {
 			isa = PBXGroup;
 			children = (
+				43BE0CDD29DF2F6C001B5963 /* Infrastructure */,
 				43BE0CD729DF28D8001B5963 /* Resources */,
 				43BE0CD329DF28A7001B5963 /* API */,
 				43BE0CCD29DF239C001B5963 /* Info.plist */,
@@ -73,18 +82,20 @@
 		43BE0CD329DF28A7001B5963 /* API */ = {
 			isa = PBXGroup;
 			children = (
+				43BE0CDA29DF2C85001B5963 /* Model */,
 				43BE0CD629DF28C2001B5963 /* Provider */,
 				43BE0CD529DF28BD001B5963 /* Manager */,
-				43BE0CD429DF28AC001B5963 /* Bussiness */,
+				43BE0CD429DF28AC001B5963 /* Business */,
 			);
 			path = API;
 			sourceTree = "<group>";
 		};
-		43BE0CD429DF28AC001B5963 /* Bussiness */ = {
+		43BE0CD429DF28AC001B5963 /* Business */ = {
 			isa = PBXGroup;
 			children = (
+				43BE0CE029DF3691001B5963 /* UserBusiness.swift */,
 			);
-			path = Bussiness;
+			path = Business;
 			sourceTree = "<group>";
 		};
 		43BE0CD529DF28BD001B5963 /* Manager */ = {
@@ -97,6 +108,7 @@
 		43BE0CD629DF28C2001B5963 /* Provider */ = {
 			isa = PBXGroup;
 			children = (
+				43BE0CD829DF2C28001B5963 /* UserProvider.swift */,
 			);
 			path = Provider;
 			sourceTree = "<group>";
@@ -112,6 +124,22 @@
 				43BE0CCA29DF239C001B5963 /* LaunchScreen.storyboard */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		43BE0CDA29DF2C85001B5963 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				43BE0CDB29DF2C92001B5963 /* UserModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		43BE0CDD29DF2F6C001B5963 /* Infrastructure */ = {
+			isa = PBXGroup;
+			children = (
+				43BE0CDE29DF2F7D001B5963 /* Constants.swift */,
+			);
+			path = Infrastructure;
 			sourceTree = "<group>";
 		};
 		47E151B9401681AADE454F55 /* Pods */ = {
@@ -249,6 +277,10 @@
 				43BE0CC429DF239A001B5963 /* ViewController.swift in Sources */,
 				43BE0CC029DF239A001B5963 /* AppDelegate.swift in Sources */,
 				43BE0CC229DF239A001B5963 /* SceneDelegate.swift in Sources */,
+				43BE0CDC29DF2C92001B5963 /* UserModel.swift in Sources */,
+				43BE0CD929DF2C28001B5963 /* UserProvider.swift in Sources */,
+				43BE0CDF29DF2F7D001B5963 /* Constants.swift in Sources */,
+				43BE0CE129DF3691001B5963 /* UserBusiness.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
